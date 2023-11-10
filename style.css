@@ -11,7 +11,7 @@ body{
     display: grid;
     grid-template-columns: 
         1fr
-        repeat(4,minmax(0,272px))
+        repeat(6,minmax(0,272px))
         1fr;
     grid-gap: 5px;
     grid-template-rows: 
@@ -21,9 +21,9 @@ body{
         1fr
     ;
     grid-template-areas: 
-        "header header header header header header"
-        "ayto ayto ayto ayto ayto ayto"
-        ". sede transparencia empleo incidencias .";
+        "header header header header header header header header"
+        "ayto ayto ayto ayto ayto ayto ayto ayto"
+        ". sede transparencia empleo incidencias conoce invest .";
 }
 
 .header{
@@ -37,30 +37,39 @@ body{
 }
 
 .sede{
-    background-color: cadetblue;
+    background-color: red;
     grid-area: sede;
 }
 
 .transparencia{
-    background-color: cadetblue;
+    background-color: brown;
     grid-area: transparencia;
 }
 
 .empleo{
-    background-color: cadetblue;
+    background-color: green;
     grid-area: empleo;
 }
 
 .incidencias{
-    background-color: cadetblue;
+    background-color: yellow;
     grid-area: incidencias;
+}
+
+.conoce{
+    background-color: pink;
+    grid-area: conoce;
+}
+
+.invest{
+    background-color: purple;
+    grid-area: invest;
 }
 
 @media only screen and (max-width: 767px) and (min-width: 320px){
     .container{
         display: grid;
         height: 100vh;
-        background-color: aqua;
         grid-template-columns: 
             1fr
             1fr;
@@ -70,11 +79,13 @@ body{
             320px
             200px
             200px
+            200px
         ;
         grid-template-areas: 
             "header header"
             "ayto ayto"
             "sede transparencia"
             "empleo incidencias"
+            "conoce invest"
     }
 }
